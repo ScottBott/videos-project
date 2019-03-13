@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class UploadDataDump extends Command
 {
-    const FILE_PATH = 'storage/app/public/data.dump';
+    const FILE_PATH = 'storage/app/data.dump';
 
     /**
      * The name and signature of the console command.
