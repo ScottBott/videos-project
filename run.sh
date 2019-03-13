@@ -1,14 +1,11 @@
 sudo apt-get update
 
 #install PHP
-#sudo apt-get install apache2
-#sudo apt-get install php libapache2-mod-php
-#sudo apt-get install php7.2-xml
-#sudo apt-get install php7.2-mysql
-
-sudo apt install composer php-mysql php-fpm php-mbstring php-tokenizer php-xml php-json php-common nginx mariadb-server
-
-#sudo apt-get install php-mbstring
+sudo apt-get install apache2
+sudo apt-get install php libapache2-mod-php
+sudo apt-get install php7.2-xml
+sudo apt-get install php7.2-mysql
+sudo apt-get install php-mbstring
 
 #Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
