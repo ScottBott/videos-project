@@ -1,11 +1,7 @@
 sudo apt-get update
 
 #install PHP
-sudo apt-get install apache2
-sudo apt-get install php libapache2-mod-php
-sudo apt-get install php7.2-xml
-sudo apt-get install php7.2-mysql
-sudo apt-get install php-mbstring
+sudo apt install php7.2-common php7.2-cli php7.2-gd php7.2-mysql php7.2-curl php7.2-intl php7.2-mbstring php7.2-bcmath php7.2-imap php7.2-xml php7.2-zip
 
 #Install composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -17,16 +13,11 @@ sudo mv composer.phar /usr/local/bin/composer
 #Install needed packages
 composer install
 
-php artisan key:generate
 sudo mv .env.example .env
+php artisan key:generate
 
 #Create database
-sudo mysql -u root -p
-CREATE DATABASE homestead;
-CREATE USER `user`@`localhost` IDENTIFIED BY 'secret';
-GRANT ALL ON homestead.* TO `user`@`localhost`;
-FLUSH PRIVILEGES;
-quit;
+sudo mysql -u root -p < "permission.sql"
 
 #Create database schema
 php artisan config:clear
