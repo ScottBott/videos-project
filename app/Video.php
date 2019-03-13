@@ -18,6 +18,9 @@ class Video extends Model
         'created_at', 'updated_at', 'deleted_at'
     ];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function watches()
     {
         return $this->hasMany(Watch::class);
